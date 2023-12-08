@@ -3,9 +3,13 @@ Backend of workout tracking app
 
 Liftbook is a web application that helps you to track your workouts. The main goal of the app is to quickly store workout history. It also has simple social features that allow of sharing results and communicating with other users.
 
-# Basic features
+# Technology stack
+- Java
+- Spring Boot
+- Hibernate
+- JUnit
 
-Extended feature descriptions below
+# Main features
 
 - Register & Log in
 - Change password
@@ -21,18 +25,7 @@ Extended feature descriptions below
 - Show workout stats (general)
 - Exporting workout data to pdf
 
-
-# Technology stack
-- Java
-- Spring Boot
-- Hibernate
-- JUnit
-
-# Technology extras
-
-- TODO
-
-# Ideas for features
+# Extra features
 - Like and comment friends' workouts
 - Multilanguage (second language - Polish, change in profile settings) 
 - Different weight units (kg/lbs) set in profile settings
@@ -46,7 +39,3 @@ Extended feature descriptions below
 - Show friend's friends (public/private list - change in profile settings)
 - Limit export by dates range
 - Limit workout data in export
-
-# Feature descriptions
-
-- TODO
