@@ -39,3 +39,13 @@ Liftbook is a web application that helps you to track your workouts. The main go
 - Show friend's friends (public/private list - change in profile settings)
 - Limit export by dates range
 - Limit workout data in export
+
+## Commit prefixes:
+
+- feat(task_no): The new feature you're adding to a particular application
+- fix(task_no): A bug fix
+- style(task_no): Feature and updates related to styling
+- refactor(task_no): Refactoring a specific section of the codebase
+- test(task_no): Everything related to testing
+- docs(task_no): Everything related to documentation
+- chore(task_no): Regular code maintenance. [ You can also use emojis to represent commit types]
