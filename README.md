@@ -49,3 +49,11 @@ Liftbook is a web application that helps you to track your workouts. The main go
 - test(task_no): Everything related to testing
 - docs(task_no): Everything related to documentation
 - chore(task_no): Regular code maintenance. [ You can also use emojis to represent commit types]
+
+
+## Code standards
+
+- Boolean attributes names end with `Flag`
+- Always use UUID Generator (https://www.uuidgenerator.net/version4) for UUID generation
+- Pay attention to SonarLint suggestions
+- Before merging to `master`: `mvn spotless:apply` in order to maintain code formatting and minimizing merge conflicts
