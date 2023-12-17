@@ -1,9 +1,6 @@
 package com.grz55.liftbook.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
 import java.util.UUID;
 
@@ -22,6 +19,7 @@ public class ExerciseEntity {
     @Id @GeneratedValue private UUID id;
 
     @NotEmpty(message = "Name cannot be empty or null")
+    @Column(nullable = false)
     private String name;
 
     private String pictureUrl;
@@ -29,5 +27,6 @@ public class ExerciseEntity {
     private String description;
 
     @NotNull(message = "Verified flag cannot be empty or null")
+    @Column(nullable = false)
     private Boolean verifiedFlag;
 }
