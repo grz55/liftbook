@@ -5,6 +5,7 @@ import com.grz55.liftbook.dto.workout.WorkoutCreateRequestDTO;
 import com.grz55.liftbook.dto.workout.WorkoutDTO;
 import com.grz55.liftbook.entity.ExerciseDefinitionEntity;
 import com.grz55.liftbook.entity.ExerciseEntity;
+import com.grz55.liftbook.entity.SetEntity;
 import com.grz55.liftbook.entity.WorkoutEntity;
 import com.grz55.liftbook.exception.NotFoundException;
 import com.grz55.liftbook.mapper.WorkoutMapper;
@@ -34,6 +35,7 @@ public class WorkoutServiceImpl implements IWorkoutService {
         log.info("Creating workout for date: {}", workoutCreateRequestDTO.getDate());
         WorkoutEntity workoutEntity = workoutMapper.toEntity(workoutCreateRequestDTO);
         fetchWorkoutRelatedEntities(workoutEntity, workoutCreateRequestDTO);
+        linkRelatedEntities(workoutEntity);
         WorkoutEntity savedWorkout = workoutRepository.save(workoutEntity);
         log.info(
                 "Workout for date {} created with id: {}",
@@ -61,6 +63,17 @@ public class WorkoutServiceImpl implements IWorkoutService {
                 throw new NotFoundException(
                         EXERCISE_DEFINITION_NOT_FOUND_MSG
                                 + exerciseCreateRequests.get(i).getExerciseDefinition());
+            }
+        }
+    }
+
+    private void linkRelatedEntities(WorkoutEntity workoutEntity) {
+        List<ExerciseEntity> exercises = workoutEntity.getExercises();
+        for (ExerciseEntity exercise : exercises) {
+            exercise.setWorkout(workoutEntity);
+            List<SetEntity> sets = exercise.getSets();
+            for (SetEntity set : sets) {
+                set.setExercise(exercise);
             }
         }
     }

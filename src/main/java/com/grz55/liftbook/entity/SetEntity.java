@@ -22,6 +22,6 @@ public class SetEntity {
     private Integer durationInSeconds;
 
     @ManyToOne
-    @JoinColumn(name = "exercise_uuid")
+    @JoinColumn(name = "exercise_uuid", nullable = false)
     private ExerciseEntity exercise;
 }

@@ -1,6 +1,8 @@
 package com.grz55.liftbook.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import java.util.List;
 import java.util.UUID;
 import lombok.AllArgsConstructor;
@@ -17,15 +19,17 @@ public class ExerciseEntity {
     @Id @GeneratedValue private UUID id;
 
     @ManyToOne(optional = false)
-    @JoinColumn(name = "exercise_definition_id")
+    @JoinColumn(name = "exercise_definition_uuid")
     private ExerciseDefinitionEntity exerciseDefinition;
 
-    @OneToMany(orphanRemoval = true)
+    @OneToMany(mappedBy = "exercise", cascade = CascadeType.ALL, orphanRemoval = true)
+    @NotNull
+    @Size(min = 1)
     private List<SetEntity> sets;
 
     private Integer restTimeInSeconds;
 
     @ManyToOne
-    @JoinColumn(name = "workout_uuid")
+    @JoinColumn(name = "workout_uuid", nullable = false)
     private WorkoutEntity workout;
 }
