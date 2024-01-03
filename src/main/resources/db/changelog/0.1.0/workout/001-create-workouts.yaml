@@ -1,0 +1,28 @@
+databaseChangeLog:
+  - changeSet:
+      id: 001-create-workouts
+      author: grz55
+      changes:
+        - createTable:
+            tableName: workouts
+            columns:
+              - column:
+                  name: id
+                  type: uuid
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+              - column:
+                  name: workout_date
+                  type: date
+                  constraints:
+                    nullable: false
+              - column:
+                  name: gym
+                  type: varchar(255)
+              - column:
+                  name: length_in_minutes
+                  type: int
+              - column:
+                  name: description
+                  type: varchar(255)

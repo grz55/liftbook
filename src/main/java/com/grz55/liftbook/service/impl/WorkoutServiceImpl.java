@@ -32,14 +32,14 @@ public class WorkoutServiceImpl implements IWorkoutService {
 
     @Override
     public WorkoutDTO createWorkout(WorkoutCreateRequestDTO workoutCreateRequestDTO) {
-        log.info("Creating workout for date: {}", workoutCreateRequestDTO.getDate());
+        log.info("Creating workout for date: {}", workoutCreateRequestDTO.getWorkoutDate());
         WorkoutEntity workoutEntity = workoutMapper.toEntity(workoutCreateRequestDTO);
         fetchWorkoutRelatedEntities(workoutEntity, workoutCreateRequestDTO);
         linkRelatedEntities(workoutEntity);
         WorkoutEntity savedWorkout = workoutRepository.save(workoutEntity);
         log.info(
                 "Workout for date {} created with id: {}",
-                savedWorkout.getDate(),
+                savedWorkout.getWorkoutDate(),
                 savedWorkout.getId());
         return workoutMapper.toDTO(savedWorkout);
     }

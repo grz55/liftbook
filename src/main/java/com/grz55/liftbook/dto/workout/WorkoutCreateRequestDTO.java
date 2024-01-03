@@ -9,8 +9,8 @@ import lombok.Data;
 @Data
 public class WorkoutCreateRequestDTO {
 
-    @NotNull(message = "Date cannot be null")
-    private LocalDate date;
+    @NotNull(message = "Workout date cannot be null")
+    private LocalDate workoutDate;
 
     private String gym;
 

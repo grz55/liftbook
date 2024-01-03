@@ -1,0 +1,28 @@
+databaseChangeLog:
+  - changeSet:
+      id: 003-create-sets
+      author: grz55
+      changes:
+        - createTable:
+            tableName: sets
+            columns:
+              - column:
+                  name: id
+                  type: uuid
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+              - column:
+                  name: reps
+                  type: int
+              - column:
+                  name: weight_in_kilograms
+                  type: decimal(10, 2)
+              - column:
+                  name: duration_in_seconds
+                  type: int
+              - column:
+                  name: exercise_uuid
+                  type: uuid
+                  constraints:
+                    nullable: false

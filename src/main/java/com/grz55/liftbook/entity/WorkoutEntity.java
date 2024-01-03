@@ -20,7 +20,7 @@ public class WorkoutEntity {
     @Id @GeneratedValue private UUID id;
 
     @Column(nullable = false)
-    private LocalDate date;
+    private LocalDate workoutDate;
 
     private String gym;
 
