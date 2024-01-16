@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - include:
+      file: 001-create-workouts.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: 002-create-exercises.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: 003-create-sets.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: 004-create-workout-relationships.yaml
+      relativeToChangelogFile: true

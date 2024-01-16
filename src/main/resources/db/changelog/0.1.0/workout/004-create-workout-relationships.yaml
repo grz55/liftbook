@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - changeSet:
+      id: 004-create-workout-relationships
+      author: grz55
+      changes:
+        - addForeignKeyConstraint:
+            baseTableName: exercises
+            baseColumnNames: exercise_definition_uuid
+            referencedTableName: exercise_definitions
+            referencedColumnNames: id
+            constraintName: fk_exercises_exercise_definitions
+        - addForeignKeyConstraint:
+            baseTableName: exercises
+            baseColumnNames: workout_uuid
+            referencedTableName: workouts
+            referencedColumnNames: id
+            constraintName: fk_exercises_workouts
+        - addForeignKeyConstraint:
+            baseTableName: sets
+            baseColumnNames: exercise_uuid
+            referencedTableName: exercises
+            referencedColumnNames: id
+            constraintName: fk_sets_exercises
