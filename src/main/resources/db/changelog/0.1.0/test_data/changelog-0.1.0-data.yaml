@@ -1,0 +1,4 @@
+databaseChangeLog:
+  - include:
+      file: exercise_definition/changelog-0.1.0-exercise-definition-data.yaml
+      relativeToChangelogFile: true

@@ -1,0 +1,7 @@
+databaseChangeLog:
+  - include:
+      file: exercise_definition/changelog-0.1.0-exercise-definition.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: workout/changelog-0.1.0-workout.yaml
+      relativeToChangelogFile: true
