@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5431/liftbook-postgres
+    username: postgres
+    password: test
+    driverClassName: org.postgresql.Driver
+  jpa:
+    spring.jpa.database-platform: org.hibernate.dialect.PostgreSQLDialect
+  hibernate:
+    ddl-auto: validate
