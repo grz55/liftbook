@@ -2,7 +2,7 @@ name: LiftBook API Continuous Integration
 
 on:
   pull_request:
-    branches: [master, dev]
+    branches: [dev]
 
 jobs:
   test_pull_request:
