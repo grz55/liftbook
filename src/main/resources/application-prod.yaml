@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5431/liftbook-postgres
-    username: postgres
-    password: test
+    url: jdbc:postgresql://dpg-cmjfqd0l5elc73drrcbg-a/liftbook
+    username: grz55
+    password: Gr30KGOjYC9O0WCmH2RnFpmlE7XMJKR9
     driverClassName: org.postgresql.Driver
   jpa:
     spring.jpa.database-platform: org.hibernate.dialect.PostgreSQLDialect
