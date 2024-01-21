@@ -27,7 +27,7 @@ Liftbook is a web application that helps you to track your workouts. The main go
 
 # Extra features
 - Like and comment friends' workouts
-- Multilanguage (second language - Polish, change in profile settings) 
+- Multilanguage (second language - Polish, change in profile settings)
 - Different weight units (kg/lbs) set in profile settings
 - User profile picture add/change
 - Placeholder for YT video of an exercise
