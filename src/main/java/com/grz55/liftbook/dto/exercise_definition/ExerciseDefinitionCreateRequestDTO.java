@@ -1,10 +1,10 @@
-package com.grz55.liftbook.dto;
+package com.grz55.liftbook.dto.exercise_definition;
 
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 
 @Data
-public class ExerciseCreateRequestDTO {
+public class ExerciseDefinitionCreateRequestDTO {
 
     @NotBlank(message = "Name cannot be null or empty")
     private String name;

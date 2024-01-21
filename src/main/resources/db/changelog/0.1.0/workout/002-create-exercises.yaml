@@ -1,0 +1,27 @@
+databaseChangeLog:
+  - changeSet:
+      id: 002-create-exercises
+      author: grz55
+      changes:
+        - createTable:
+            tableName: exercises
+            columns:
+              - column:
+                  name: id
+                  type: uuid
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+              - column:
+                  name: exercise_definition_uuid
+                  type: uuid
+                  constraints:
+                    nullable: false
+              - column:
+                  name: rest_time_in_seconds
+                  type: int
+              - column:
+                  name: workout_uuid
+                  type: uuid
+                  constraints:
+                    nullable: false
