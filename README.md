@@ -57,3 +57,8 @@ Liftbook is a web application that helps you to track your workouts. The main go
 - Always use UUID Generator (https://www.uuidgenerator.net/version4) for UUID generation
 - Pay attention to SonarLint suggestions
 - Before merging to `master`: `mvn spotless:apply` in order to maintain code formatting and minimizing merge conflicts
+
+## Useful commands
+
+- Building docker image locally: `docker build -t liftbook-api .`
+- Running docker image locally: `docker run --name liftbook-api -p 8080:8080 liftbook-api`
